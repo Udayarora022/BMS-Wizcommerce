@@ -9,7 +9,7 @@ export default function HomePage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/events")
+    axios.get("https://bms-wizcommerce-2.onrender.com/events")
       .then(res => {
         setEvents(res.data);
         setLoading(false);

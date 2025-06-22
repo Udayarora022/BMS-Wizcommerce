@@ -15,7 +15,7 @@ export default function EventDetailsPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/events/${id}`)
+    axios.get(`https://bms-wizcommerce-2.onrender.com/events/${id}`)
       .then(res => {
         setEvent(res.data);
         setLoading(false);
@@ -31,7 +31,7 @@ export default function EventDetailsPage() {
     setMessage(null);
     setSubmitting(true);
     try {
-      await axios.post(`http://localhost:3000/events/${id}/bookings`, {
+      await axios.post(`https://bms-wizcommerce-2.onrender.com/events/${id}/bookings`, {
         name,
         email,
         slotId: selectedSlot.id,

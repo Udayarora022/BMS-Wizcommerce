@@ -28,7 +28,7 @@ export default function CreateEventPage() {
         .filter(Boolean)
         .map(slot => slot ? new Date(slot).toISOString() : null)
         .filter(Boolean);
-      await axios.post("http://localhost:3000/events", {
+      await axios.post("https://bms-wizcommerce-2.onrender.com/events", {
         title,
         description,
         timeSlots: formattedSlots,

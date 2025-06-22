@@ -14,7 +14,7 @@ export default function MyBookingsPage() {
     setLoading(true);
     setError(null);
     axios
-      .get(`http://localhost:3000/users/${userEmail}/bookings`)
+      .get(`https://bms-wizcommerce-2.onrender.com/users/${userEmail}/bookings`)
       .then((res) => {
         setBookings(res.data);
         setLoading(false);
