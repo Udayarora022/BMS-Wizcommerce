@@ -5,16 +5,16 @@ const cors = require('cors');
 
 const app = express();
 
-// CORS configuration
-const corsOptions = {
-  origin: 'http://localhost:5173', // Only allow Vite frontend
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
-  credentials: true, // Allow cookies/auth headers if needed
-};
+// Allow requests from your Vercel frontend and localhost for development
+const allowedOrigins = [
+  'https://bms-wizcommerce-y24g.vercel.app/', // replace with your actual Vercel domain
+  'http://localhost:3000'
+];
 
-// Apply CORS as the very first middleware
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 // Required middleware
 app.use(express.json());
