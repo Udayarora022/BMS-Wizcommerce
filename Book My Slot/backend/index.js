@@ -7,7 +7,7 @@ const app = express();
 
 // Allow requests from your Vercel frontend and localhost for development
 const allowedOrigins = [
-  'https://bms-wizcommerce-y24g.vercel.app/', // replace with your actual Vercel domain
+  'https://bms-wizcommerce-y24g.vercel.app', // no trailing slash!
   'http://localhost:3000'
 ];
 
