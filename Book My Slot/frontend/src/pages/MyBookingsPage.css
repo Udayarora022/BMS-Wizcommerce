@@ -1,0 +1,128 @@
+.my-bookings {
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 2rem auto 5rem;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: #00bcd4;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.booking-card {
+  background: rgba(37, 37, 37, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.08);
+}
+
+.booking-title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 188, 212, 0.3);
+  padding-bottom: 0.3rem;
+}
+
+.booking-description {
+  color: #bbbbbb;
+  margin-bottom: 1rem;
+}
+
+.booking-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+  font-size: 1rem;
+}
+
+.meta-label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  color: #00bcd4;
+}
+
+.meta-value {
+  color: #e0e0e0;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 400px;
+  background: rgba(37, 37, 37, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 188, 212, 0.3);
+  border-radius: 50%;
+  border-top-color: #00bcd4;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 400px;
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  background: rgba(37, 37, 37, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.no-bookings h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
